@@ -1,0 +1,45 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>All work · Kumaon &amp; Co.</title><meta name="description" content="An independent video production house in Bangalore making ads, music videos and social content — shot, scored and cut in-house."><meta name="theme-color" content="#efe6d3"><link rel="icon" href="/favicon.png" type="image/png"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><meta property="og:type" content="website"><meta property="og:site_name" content="Kumaon &amp; Co."><meta property="og:title" content="All work · Kumaon &amp; Co."><meta property="og:description" content="An independent video production house in Bangalore making ads, music videos and social content — shot, scored and cut in-house."><meta property="og:image" content="https://kumaon.co/images/og-image.png"><link rel="canonical" href="https://kumaon.co/work/"><meta property="og:url" content="https://kumaon.co/work/"><meta name="twitter:card" content="summary_large_image"><link rel="preload" href="/fonts/bricolage-grotesque-latin-opsz.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="/fonts/hanken-grotesk-latin-wght.woff2" as="font" type="font/woff2" crossorigin><script>
+      /* Runs in <head> before first paint: sets the theme and flags animated mode, so nothing flashes. */
+      /* Arriving on a wave from another page: the screen starts covered in the wave's colour (ui.js then lets the wave carry on up and off). */
+      try{ var kw = sessionStorage.getItem('kc-wave'); if(kw){ var ki = kw.lastIndexOf('|'); if(ki > 0 && Date.now() - Number(kw.slice(ki + 1)) < 6000){ kw = kw.slice(0, ki); } else { kw = null; sessionStorage.removeItem('kc-wave'); } } if(kw){ document.documentElement.classList.add('kc-arriving'); document.documentElement.style.setProperty('--arrive', kw); } }catch(e){}
+      try{ if(!(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) document.documentElement.classList.add('js-reveal'); }catch(e){}
+      /* One steady page height for the pinned scenes (--vh). On a phone the address bar slides away and back, so the height seen by the page
+         changes; the scenes use the largest height seen, so they always fill the screen and the scroll maths never shifts mid-scroll. */
+      (function(){
+        var root = document.documentElement, w = innerWidth, m = innerHeight, last = -1;
+        /* the tallest the screen can be (address bar hidden) is the large viewport height; a hidden probe reads it fresh each time, so the
+           scenes never have to grow while you scroll, and they follow the window if it is resized */
+        var pr = null;
+        try{ pr = document.createElement('div'); pr.style.cssText = 'position:fixed;top:0;left:0;width:0;height:100lvh;visibility:hidden;pointer-events:none'; root.appendChild(pr); }catch(e){ pr = null; }
+        var touch = false; try{ touch = matchMedia('(pointer: coarse)').matches; }catch(e){}
+        function set(){
+          w = innerWidth;
+          m = innerHeight;
+          if(touch && pr){ var big = pr.offsetHeight || 0; if(big > m) m = big; }
+          if(m !== last){ last = m; root.style.setProperty('--vh', m + 'px'); try{ dispatchEvent(new Event('vhchange')); }catch(e){} }
+        }
+        window.__vh = function(){ return m; };
+        set();
+        addEventListener('resize', set);
+        addEventListener('load', set);
+        if(window.visualViewport) visualViewport.addEventListener('resize', set);
+        addEventListener('orientationchange', function(){ setTimeout(function(){ w = -1; set(); }, 250); });
+      })();
+      (function(){
+        try{
+          var saved = localStorage.getItem('kumaon-theme');
+          var theme = saved || ((window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'light');
+          document.documentElement.setAttribute('data-theme', theme);
+        }catch(e){
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+      })();
+      function toggleTheme(){
+        var html = document.documentElement;
+        var next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        html.classList.add('theme-flip');
+        html.setAttribute('data-theme', next);
+        setTimeout(function(){ html.classList.remove('theme-flip'); }, 120);
+        try{ localStorage.setItem('kumaon-theme', next); }catch(e){}
+      }
+    </script><link rel="stylesheet" href="/_astro/Footer.BswRB9ve.css"></head><body><a class="skip" href="#main">Skip to content</a><header class="top"><div class="top-inner"><div class="brand"><button class="theme-toggle" type="button" aria-label="Toggle dark mode"><svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path></svg><svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path></svg></button><a class="wordmark" href="/" aria-label="Kumaon &amp; Co., back to top">Kumaon <span>&amp;</span> Co.</a><button class="theme-toggle sound-btn" type="button" data-sound-toggle aria-pressed="false" aria-label="Sound off, switch on"><svg class="icon-snd-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z"></path><path d="M16 9l5 6M21 9l-5 6"></path></svg><svg class="icon-snd-on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z"></path><path d="M15.5 9a4.2 4.2 0 010 6M18.3 6.5a8 8 0 010 11"></path></svg></button></div><nav class="nav" aria-label="Main"><a class="nav-link" href="/#work">Work</a><a class="nav-link" href="/#approach">Approach</a><a class="nav-cta" href="/#contact"><span class="cta-label">Contact us</span><span class="cta-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></a><button class="theme-toggle sound-btn sound-nav" type="button" data-sound-toggle aria-pressed="false" aria-label="Sound off, switch on"><svg class="icon-snd-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z"></path><path d="M16 9l5 6M21 9l-5 6"></path></svg><svg class="icon-snd-on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z"></path><path d="M15.5 9a4.2 4.2 0 010 6M18.3 6.5a8 8 0 010 11"></path></svg></button><button class="menu-btn" type="button" aria-label="Menu" aria-expanded="false" aria-controls="site-menu"><span></span><span></span><span></span></button></nav></div><div class="menu" id="site-menu" hidden><a class="nav-link" href="/#work">Work</a><a class="nav-link" href="/#approach">Approach</a><a class="nav-cta" href="/#contact"><span class="cta-label">Contact us</span><span class="cta-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></a></div></header><div class="top-spacer" aria-hidden="true"></div><main class="wrap gutter" style="min-height:60svh; padding-block:clamp(72px, 14vh, 140px);"><span class="idx">All work /</span><h1 style="font-size:clamp(2.6rem, 8vw, 5.4rem);">The full archive<br>is on its way.</h1><p style="max-width:44ch; margin-top:20px; color:var(--ink-dim); font-family:'Hanken Grotesk', system-ui, sans-serif; line-height:1.5;">More films and photos will live here. For now, the best of it is on the home page.</p><p style="margin-top:28px;"><a href="/#work" style="font-family:'Bricolage Grotesque', system-ui, sans-serif; font-weight:700; text-decoration:underline; text-decoration-color:var(--accent); text-decoration-thickness:2px; text-underline-offset:6px;">← Back to selected work</a></p></main><footer>Bangalore<span class="bangalore-time" aria-label="local time"></span></footer><script type="module" src="/_astro/Layout.astro_astro_type_script_index_0_lang.Dz84ae__.js"></script></body></html>
